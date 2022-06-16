@@ -1,0 +1,31 @@
+ sistema de importación
+
+costo_Envio  =  1500
+totales  =  0
+productos_Matriz  = [[ 1 , "Maíz grano" , 285.55 ],
+        [ 2 , "Pepino" , 334.72 ],
+        [ 3 , "Tomate verde" , 129.00 ]]
+print ( "Introduce el id del producto" )
+id_Producto  =  int ( entrada ())
+si ( id_Producto  >  3 ):
+    print ( "No existe ese producto" )
+    sistema _ salir ()
+más :
+    si ( id_Producto  >=  1 ):
+        id_Producto  =  id_Producto - 1
+    más :
+        print ( "No existe ese producto" )
+    productos_Matriz  =  productos_Matriz [ id_Producto ]
+    print ( "Introduzca la cantidad de cajas a vender" )
+    cajas_Vender  =  int ( entrada ())
+    producto  =  productos_Matriz [ 1 ]
+    precio  =  int ( productos_Matriz [ 2 ])
+    si ( cajas_Vender  <=  100 ):
+        total  = ( precio  *  cajas_Vender  +  costo_Envio )
+        print ( "La venta es menor o igual a 100 cajas" )
+        print ( "Se cobra el envio de"  +  str ( costo_Envio ))
+    más :
+        total  = ( precio  *  cajas_Vender )
+print ( "El producto es"  +  producto )
+print ( "El precio es"  +  str ( precio ))
+print ( "El total es"  +  str ( total ))
